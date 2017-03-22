@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!---Задание №1
+
+На странице simply.html написать javascript-код, находящий и выводящий в консоль (console.log) все простые числа в интервале от 1 до 1000.  ---->
+
+<script>
+    simplyNumber:
+            for (var n = 2; n < 1000; n++) {
+
+                for (var m = 2; m < n; m++) {
+                    if (n % m == 0) continue simplyNumber;
+                }
+
+                console.log(n);
+            }
+</script>
+
+</body>
+</html>

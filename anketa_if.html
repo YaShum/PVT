@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!---- Задание №2
+Требуется спросить у пользователя:
+фамилию, имя, отчество РАЗДЕЛЬНО (оператором prompt)
+возраст в годах (оператором prompt)
+пол (оператором confirm, например, "ваш пол - мужской?")
+и вывести оператором alert анкету пользователя по примеру:
+
+ФИО: Иванов Иван Иванович
+возраст, лет: 20
+возраст, дней: 7300
+пол: мужской
+пенсионный возраст: нет
+
+На странице anketa_if.html реализовать задание с использованием условного оператора (if), без условной операции (?:). ---->
+
+<script>
+    var name = prompt("Ваше имя?", "");
+    var surname = prompt("Ваша фамидия?", "");
+    var patron = prompt("Ваше отчество?", "");
+    var age = prompt("Ваш возраст (количество лет)?", 100);
+    var ageDate = age * 365;
+    var gender = confirm("ваш пол - мужской?");
+    if (gender == true)
+        gender = " пол: мужской ";
+    else {
+        gender = " пол: женский ";
+    }
+
+    if (gender == true && age >= 60) {
+        pensAge = "да";
+    } else {
+        pensAge = "нет";
+    }
+    if (gender != true && age >= 55) {
+        pensAge = "да";
+    } else {
+        pensAge = "нет";
+    }
+
+    alert('ФИО: ' + name + ' ' + surname + ' ' + patron + '\n\r ' + 'возраст, лет: ' + age + '\n\r ' + 'возраст, дней: ' + ageDate + '\n\r ' + gender + '\n\r ' + 'пенсионный возраст: ' + pensAge);
+</script>
+
+</body>
+</html>
